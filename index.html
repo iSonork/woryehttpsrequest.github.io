@@ -1,13 +1,15 @@
 <span id="ajaxButton" style="cursor: pointer; text-decoration: underline">
-  Make a request
+  Ping to Worye
 </span>
 <script type="text/javascript">
 (function() {
   var httpRequest;
-  //document.getElementById("ajaxButton").onclick = function() { makeRequest('https://Distest.isonork.repl.co'); };
+  document.getElementById("ajaxButton").onclick = function() { active() };
   
-  for (let i=0; i<10; i++) {
-     loop(i);
+  function active() {
+    for (let i=0; i<10; i++) {
+       loop(i);
+    }
   }
 
   function loop(i) {
