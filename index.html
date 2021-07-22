@@ -10,6 +10,9 @@
   function active() {
     for (let i=0; i<10; i++) {
        loop(i);
+      if(i==10) {
+        document.location.reload(true);
+      }
     }
   }
 
@@ -17,7 +20,6 @@
     setTimeout(function() {
         makeRequest('https://Distest.isonork.repl.co');
     }, 120000 * i);
-    document.location.reload(true);
   }
   
   function makeRequest(url) {
