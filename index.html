@@ -6,7 +6,7 @@
   var httpRequest;
   //document.getElementById("ajaxButton").onclick = function() { active() };
   active()
-  count=0
+
   function active() {
     for (let i=0; i<10; i++) {
        loop(i);
@@ -14,10 +14,6 @@
   }
 
   function loop(i) {
-    count++
-      if(count>9) {
-        document.location.reload(true);
-      }
     setTimeout(function() {
         makeRequest('https://Distest.isonork.repl.co');
     }, 5000 * i);
@@ -45,6 +41,7 @@
     httpRequest.onreadystatechange = alertContents;
     httpRequest.open('GET', url);
     httpRequest.send();
+    await document.location.reload(true);
   }
 
   function alertContents() {
