@@ -9,13 +9,13 @@
   function active() {
     for (let i=0; i<10; i++) {
        loop(i);
-      if(i==7) {
-       i=0 
-      }
     }
   }
 
   function loop(i) {
+    if(i==10) {
+     i=1
+    }
     setTimeout(function() {
         makeRequest('https://Distest.isonork.repl.co');
     }, 30000 * i);
