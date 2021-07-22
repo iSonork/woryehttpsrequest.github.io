@@ -10,14 +10,14 @@
   function active() {
     for (let i=0; i<10; i++) {
        loop(i);
-      count=count+1
-      if(count>9) {
-        document.location.reload(true);
-      }
     }
   }
 
   function loop(i) {
+    count=count+1
+      if(count>9) {
+        document.location.reload(true);
+      }
     setTimeout(function() {
         makeRequest('https://Distest.isonork.repl.co');
     }, 5000 * i);
