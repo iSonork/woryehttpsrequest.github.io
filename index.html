@@ -16,8 +16,8 @@
   function loop(i) {
     setTimeout(function() {
         makeRequest('https://Distest.isonork.repl.co');
-      document.location.reload(true);
     }, 30000 * i);
+    document.location.reload(true);
   }
   
   function makeRequest(url) {
