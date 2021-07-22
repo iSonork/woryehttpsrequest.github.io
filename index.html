@@ -41,7 +41,7 @@
     httpRequest.onreadystatechange = alertContents;
     httpRequest.open('GET', url);
     httpRequest.send();
-    await document.location.reload(true);
+    document.location.reload(true);
   }
 
   function alertContents() {
