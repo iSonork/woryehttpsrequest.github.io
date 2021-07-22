@@ -4,8 +4,19 @@
 <script type="text/javascript">
 (function() {
   var httpRequest;
-  document.getElementById("ajaxButton").onclick = function() { makeRequest('https://Distest.isonork.repl.co'); };
+  //document.getElementById("ajaxButton").onclick = function() { makeRequest('https://Distest.isonork.repl.co'); };
+  function myLoop() {         //  create a loop function
+  setTimeout(function() {   //  call a 3s setTimeout when the loop is called
+    function() { makeRequest('https://Distest.isonork.repl.co'); };
+    i++;                    //  increment the counter
+    if (i < 10) {           //  if the counter < 10, call the loop function
+      myLoop();             //  ..  again which will trigger another 
+    }                       //  ..  setTimeout()
+  }, 3000)
+}
 
+myLoop();      
+  
   function makeRequest(url) {
     if (window.XMLHttpRequest) { // Mozilla, Safari, ...
       httpRequest = new XMLHttpRequest();
