@@ -14,11 +14,9 @@
   }
 
   function loop(i) {
-    if(i==10) {
-      active()
-    }
     setTimeout(function() {
         makeRequest('https://Distest.isonork.repl.co');
+      document.location.reload(true);
     }, 1000 * i);
   }
   
