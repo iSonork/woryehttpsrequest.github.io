@@ -7,8 +7,11 @@
   document.getElementById("ajaxButton").onclick = function() { active() };
   
   function active() {
-    for (let i=0; i<9999999; i++) {
+    for (let i=0; i<10; i++) {
        loop(i);
+      if(i==10) {
+       i=0 
+      }
     }
   }
 
