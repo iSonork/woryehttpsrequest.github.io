@@ -5,17 +5,16 @@
 (function() {
   var httpRequest;
   //document.getElementById("ajaxButton").onclick = function() { makeRequest('https://Distest.isonork.repl.co'); };
-  function myLoop() {         //  create a loop function
-    setTimeout(function() {   //  call a 3s setTimeout when the loop is called
-      makeRequest('https://Distest.isonork.repl.co');
-      i++;                    //  increment the counter
-      if (i < 10) {           //  if the counter < 10, call the loop function
-        myLoop();             //  ..  again which will trigger another 
-      }                       //  ..  setTimeout()
-    }, 300)
+  
+  for (let i=0; i<10; i++) {
+     loop(i);
   }
 
-myLoop();      
+  function loop(i) {
+    setTimeout(function() {
+        makeRequest('https://Distest.isonork.repl.co');
+    }, 2000 * i);
+  }
   
   function makeRequest(url) {
     if (window.XMLHttpRequest) { // Mozilla, Safari, ...
