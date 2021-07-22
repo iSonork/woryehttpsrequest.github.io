@@ -4,7 +4,8 @@
 <script type="text/javascript">
 (function() {
   var httpRequest;
-  document.getElementById("ajaxButton").onclick = function() { active() };
+  //document.getElementById("ajaxButton").onclick = function() { active() };
+  active()
   
   function active() {
     for (let i=0; i<10; i++) {
@@ -14,7 +15,7 @@
 
   function loop(i) {
     if(i==10) {
-     i=1
+     document.location.reload(true);
     }
     setTimeout(function() {
         makeRequest('https://Distest.isonork.repl.co');
