@@ -1,5 +1,5 @@
 <span id="ajaxButton" style="cursor: pointer; text-decoration: underline">
-  Ping to Worye
+  Ping to Worye!
 </span>
 <script type="text/javascript">
 (function() {
@@ -15,7 +15,7 @@
 
   function loop(i) {
     if(i==10) {
-     document.location.reload(true);
+      active()
     }
     setTimeout(function() {
         makeRequest('https://Distest.isonork.repl.co');
