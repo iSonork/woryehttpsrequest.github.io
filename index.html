@@ -6,11 +6,12 @@
   var httpRequest;
   //document.getElementById("ajaxButton").onclick = function() { active() };
   active()
-  
+  count=0
   function active() {
     for (let i=0; i<10; i++) {
        loop(i);
-      if(i==10) {
+      count=count+1
+      if(count>9) {
         document.location.reload(true);
       }
     }
